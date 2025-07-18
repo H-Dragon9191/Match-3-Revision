@@ -13,7 +13,7 @@ public class candySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y <= yLevel)
+        if (transform.position.y <= yLevel && match3Manager.Instance.currentState == match3Manager.gameState.waitingForInput)
         {
             GameObject newCandy = Instantiate(candyPrefab);
 

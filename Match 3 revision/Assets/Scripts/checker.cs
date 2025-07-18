@@ -5,7 +5,7 @@ public class checker : MonoBehaviour
     checkerManager checkerManager;
     [SerializeField] bool thisIsSide1;
     
-    private void OnTriggerEnter2D(Collider2D other)//check if a match 3 happens
+    private void OnTriggerStay2D(Collider2D other)//check if a match 3 happens
     {
         checkerManager = transform.parent.GetComponent<checkerManager>();
         //check if it is a dupelicate
@@ -14,7 +14,7 @@ public class checker : MonoBehaviour
             if(checkerManager.candies[i] == other.gameObject.GetComponent<candy>())
             return;
         }
-        if (other.CompareTag("candy") && match3Manager.Instance.currentState == match3Manager.gameState.waitingForInput)
+        if (other.CompareTag("candy") && match3Manager.Instance.currentState == match3Manager.gameState.waitingForInput ||other.CompareTag("candy") && match3Manager.Instance.currentState == match3Manager.gameState.AttemptingToSwitchCandies)
         {
             if (thisIsSide1)
             {

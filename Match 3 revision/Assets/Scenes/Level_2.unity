@@ -4559,8 +4559,9 @@ MonoBehaviour:
   - {fileID: 940478214}
   currentState: 0
   succesfull: 0
+  maxFailSafeTime: 2
   eventSystem: {fileID: 875719011}
-  duration: 1
+  duration: 0.75
 --- !u!114 &1186212305
 MonoBehaviour:
   m_ObjectHideFlags: 0

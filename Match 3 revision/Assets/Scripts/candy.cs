@@ -15,6 +15,7 @@ public class candy : MonoBehaviour
     void Update()
     {
         transform.GetChild(0).GetComponent<Image>().sprite = Sprites[candyTypeIndex];
+        transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);//dk why but it changes the sizes so we do this to keep it constant
     }
     void beSucessfullTrue()
     {

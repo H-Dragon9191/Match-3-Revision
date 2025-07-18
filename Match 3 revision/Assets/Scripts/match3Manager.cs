@@ -20,6 +20,8 @@ public class match3Manager : MonoBehaviour
     private GameObject startObject;
     private GameObject endObject;
     public bool succesfull;
+    float failsafeTimer;
+    [SerializeField] float maxFailSafeTime = 3;
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -45,6 +47,7 @@ public class match3Manager : MonoBehaviour
     List<RaycastResult> results = new List<RaycastResult>();
     [SerializeField] float duration  = 2;//duration of switching
     Transform firstTouchedCandy, secondTouchedCandy;
+    
     void Start()
     {
         raycaster = gameObject.GetComponent<GraphicRaycaster>();
@@ -54,6 +57,7 @@ public class match3Manager : MonoBehaviour
         switch (currentState)
         {
             case gameState.waitingForInput:
+                failsafeTimer = 0;
                 for (int i = 0; i < GridLayoutGroups.Length; i++)
                 {
                     GridLayoutGroups[i].enabled = true;//Allowing Gravity
@@ -113,6 +117,14 @@ public class match3Manager : MonoBehaviour
                 {
                     GridLayoutGroups[i].enabled = false;//Pausing Gravity
                 }
+
+                //failsafe in case a bug happens
+                failsafeTimer += Time.deltaTime;
+                if (failsafeTimer >= maxFailSafeTime) 
+                {
+                    currentState = gameState.waitingForInput;
+                    succesfull = false;
+                }
                 break;
         }
     }
@@ -147,15 +159,17 @@ public class match3Manager : MonoBehaviour
 
         candy_1.position = startB;
         candy_2.position = startA;
+
         //we are undoing so no need to check if it is succesfull
         if (!succesfull && !undo)
         {
             StartCoroutine(moveTwoCandies(candy_1, candy_2, true));
             yield return null;
         }
-        else if(undo)
+        else
         {
             currentState = gameState.waitingForInput;
         }
     }
+    
 }

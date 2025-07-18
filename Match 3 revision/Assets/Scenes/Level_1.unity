@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e6c40ac3d3c8242807f4db5ab7dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yLevel: 2250
+  yLevel: 2000
   candyPrefab: {fileID: 1772534311608835327, guid: 86ab20366e86c38498fcb2ff8a8234bc, type: 3}
 --- !u!1001 &205895446
 PrefabInstance:
@@ -2902,7 +2902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e6c40ac3d3c8242807f4db5ab7dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yLevel: 2250
+  yLevel: 2000
   candyPrefab: {fileID: 1772534311608835327, guid: 86ab20366e86c38498fcb2ff8a8234bc, type: 3}
 --- !u!1 &727320960
 GameObject:
@@ -2952,7 +2952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e6c40ac3d3c8242807f4db5ab7dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yLevel: 2250
+  yLevel: 2000
   candyPrefab: {fileID: 1772534311608835327, guid: 86ab20366e86c38498fcb2ff8a8234bc, type: 3}
 --- !u!224 &764160465 stripped
 RectTransform:
@@ -4169,7 +4169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e6c40ac3d3c8242807f4db5ab7dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yLevel: 2250
+  yLevel: 2000
   candyPrefab: {fileID: 1772534311608835327, guid: 86ab20366e86c38498fcb2ff8a8234bc, type: 3}
 --- !u!1001 &1110020589
 PrefabInstance:
@@ -4530,6 +4530,7 @@ GameObject:
   - component: {fileID: 1186212305}
   - component: {fileID: 1186212304}
   - component: {fileID: 1186212309}
+  - component: {fileID: 1186212310}
   m_Layer: 5
   m_Name: match 3
   m_TagString: Untagged
@@ -4549,7 +4550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d24aaac94e670148bb94b9d12cf43e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 300
+  distance: 200
   GridLayoutGroups:
   - {fileID: 75357365}
   - {fileID: 849634419}
@@ -4559,8 +4560,9 @@ MonoBehaviour:
   - {fileID: 940478214}
   currentState: 0
   succesfull: 0
+  maxFailSafeTime: 3
   eventSystem: {fileID: 875719011}
-  duration: 1
+  duration: 0.75
 --- !u!114 &1186212305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4664,6 +4666,103 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScore: 0
+--- !u!82 &1186212310
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186212303}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2e61bd8080b0c14595aae2ac21f5064, type: 3}
+  m_Resource: {fileID: 8300000, guid: e2e61bd8080b0c14595aae2ac21f5064, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1193048007
 GameObject:
   m_ObjectHideFlags: 0
@@ -4712,7 +4811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e6c40ac3d3c8242807f4db5ab7dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yLevel: 2250
+  yLevel: 2000
   candyPrefab: {fileID: 1772534311608835327, guid: 86ab20366e86c38498fcb2ff8a8234bc, type: 3}
 --- !u!1001 &1193816568
 PrefabInstance:
@@ -6629,7 +6728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e6c40ac3d3c8242807f4db5ab7dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yLevel: 2250
+  yLevel: 2000
   candyPrefab: {fileID: 1772534311608835327, guid: 86ab20366e86c38498fcb2ff8a8234bc, type: 3}
 --- !u!1001 &1857220686
 PrefabInstance:

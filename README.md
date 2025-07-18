@@ -3,7 +3,7 @@
 I started the project by outlining all the steps I had to do on papper and getting a game plan of the project
 
 Step 1
-the grid lauout group script was used to make the candies fall down(without animation as this just a prototype, though other aniimations were added)
+the grid lauout group script was used to make the candies fall down(without animation as this just a prototype, though other animations were added)
 Step 2
 added the match 3 manager(stops the candies from falling down when not in the correct state)
 using UnityEngine;
@@ -110,4 +110,30 @@ public class candySpawner : MonoBehaviour
         }
     }
 }
+Step 4
+I kind off just got into the zone here, so I didn't document too much but I think that's fine as you guys asked only for a brief read me and this is already too long
+all of the scripts are in scripts folder, if you wish to review them
 
+Closing notes
+The code is highly scallable, with ways to add more abilities and candy types
+the bugs are few in the game(though their is one, where when moving candies and getting points make it move a bit weirdly, I tried to fix that but had no time due to a reason I will state in a bit)
+
+Overall, It took me about 8 hours, but I would have done it in a lesser amount of days but I barely had any time(even now) because We have been repainting the house and now redecorating 
+
+If I had more time I would've added a special type of candy that destorys everything in a row or collumn, added sound effects(other than the jazz that I played on the piano) and lastly fixed that bug, that doesn't ruin gameplay but makes it differnt
+
+Evaluation For Junior
+Working Match 3 game (done, with minor bugs)
+Mobile Friendly UI and controls(done)
+Basic Progression b/w levels(done and extra as it use the highscore system)
+clean code(done as there were many comments to explain difffernt parts)
+
+Evaluation For Senior
+Reuseablity(some components have this ability like the candy script works for all the candies and can even work for special ones)
+Mobile optimization(runs well on mobile)
+smooth animation(some animations were implemented and run smoothly)
+code extensibility for future use(done)
+
+Stretch Goals
+Visiual effect for matches
+Music but no sound effects

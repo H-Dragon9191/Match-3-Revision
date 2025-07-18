@@ -4,7 +4,7 @@ public class checkerManager : MonoBehaviour
 {
     [SerializeField] bool allSidesEqual;
     public candy[] candies;
-    public int side1, side2 = 23290803;//random number so it doesnt auto think it is a match
+    public int side1 = 1002, side2 = 23290803;//random number so it doesnt auto think it is a match
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
