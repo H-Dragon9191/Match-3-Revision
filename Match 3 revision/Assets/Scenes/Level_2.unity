@@ -372,7 +372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -510, y: -700}
+  m_AnchoredPosition: {x: -510, y: -548.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75357365
@@ -3996,7 +3996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 490, y: -700}
+  m_AnchoredPosition: {x: 490, y: -548.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &943168238 stripped
@@ -4549,7 +4549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d24aaac94e670148bb94b9d12cf43e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 300
+  distance: 1.5
   GridLayoutGroups:
   - {fileID: 75357365}
   - {fileID: 849634419}

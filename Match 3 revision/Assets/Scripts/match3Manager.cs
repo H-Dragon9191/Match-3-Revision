@@ -6,7 +6,7 @@ using System.Collections;
  
 public class match3Manager : MonoBehaviour
 {
-    [SerializeField] float distance = 1.5f; //distance to switch candies, if this was not made, then we could switch any two candies
+    [SerializeField] float distance = 300f; //distance to switch candies, if this was not made, then we could switch any two candies
     [SerializeField] GridLayoutGroup[] GridLayoutGroups;
     public enum gameState
     {
@@ -153,7 +153,7 @@ public class match3Manager : MonoBehaviour
             StartCoroutine(moveTwoCandies(candy_1, candy_2, true));
             yield return null;
         }
-        else
+        else if(undo)
         {
             currentState = gameState.waitingForInput;
         }
