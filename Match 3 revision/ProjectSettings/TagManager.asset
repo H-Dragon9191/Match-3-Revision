@@ -6,6 +6,7 @@ TagManager:
   tags:
   - candy
   - checker
+  - ScoreText
   layers:
   - Default
   - TransparentFX

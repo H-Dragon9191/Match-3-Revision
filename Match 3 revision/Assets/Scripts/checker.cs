@@ -8,11 +8,16 @@ public class checker : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)//check if a match 3 happens
     {
         checkerManager = transform.parent.GetComponent<checkerManager>();
+        //check if it is a dupelicate
+        for (int i = 0; i < checkerManager.candies.Length; i++)
+        {
+            if(checkerManager.candies[i] == other.gameObject.GetComponent<candy>())
+            return;
+        }
         if (other.CompareTag("candy"))
         {
             if (thisIsSide1)
             {
-                Debug.Log("Catch this nigga" + checkerManager.side1 + "with" + other.GetComponent<candy>().candyTypeIndex);
                 checkerManager.side1 = other.GetComponent<candy>().candyTypeIndex;
                 checkerManager.candies[1] = other.GetComponent<candy>();
             }
