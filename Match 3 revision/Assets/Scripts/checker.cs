@@ -14,7 +14,7 @@ public class checker : MonoBehaviour
             if(checkerManager.candies[i] == other.gameObject.GetComponent<candy>())
             return;
         }
-        if (other.CompareTag("candy"))
+        if (other.CompareTag("candy") && match3Manager.Instance.currentState == match3Manager.gameState.waitingForInput)
         {
             if (thisIsSide1)
             {
